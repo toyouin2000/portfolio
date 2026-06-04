@@ -6,6 +6,7 @@ import {
   Trophy,
   Clapperboard,
   PlaneTakeoff,
+  type LucideIcon,
 } from "lucide-react"; 
 import type { ProjectStatus } from "@/components/content/project-card";
 
@@ -14,7 +15,7 @@ export interface Project {
   description: string;
   tag: string;
   status: ProjectStatus;
-  icon: React.ElementType;
+  icon: LucideIcon;
   color: "violet" | "yellow" | "blue" | "green";
   url: string;
 }

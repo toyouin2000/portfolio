@@ -12,6 +12,7 @@ export default function SkillGroup({
   title,
   icon: Icon,
   color,
+
   skills,
   showDivider,
 }: SkillGroupProps) {

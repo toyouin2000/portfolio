@@ -32,4 +32,5 @@ export default function SkillPill({
       {label}
     </div>
   );
+
 }

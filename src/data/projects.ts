@@ -10,8 +10,7 @@ import {
   type LucideIcon,
 } from "lucide-react"; 
  
-import type { ProjectStatus } from "@/components/content/project-card";
-import { PlaneTakeoff, Trophy, Clapperboard } from "lucide-react";
+import type { ProjectStatus } from "@/components/content/project-card"; 
 
 export type ProjectIcon =
   | typeof Trophy
@@ -27,7 +26,7 @@ export interface Project {
  
   icon: LucideIcon;
  
-  icon: ProjectIcon;
+  // icon: ProjectIcon;
  
   color: "violet" | "yellow" | "blue" | "green";
   url: string;

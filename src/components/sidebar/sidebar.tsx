@@ -14,7 +14,7 @@ export default function Sidebar() {
         lg:h-full
         lg:w-[clamp(280px,25vw,360px)]
         overflow-auto
-        
+         
         rounded-[clamp(16px,1vw,24px)]
 
         border

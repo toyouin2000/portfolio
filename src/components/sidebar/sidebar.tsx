@@ -6,13 +6,15 @@ import SocialLinks from "./social-links";
 export default function Sidebar() {
   return (
     <aside
-      className="
+      className=" 
         w-full
         flex-shrink-0
+        py-50px
 
         lg:h-full
         lg:w-[clamp(280px,25vw,360px)]
-
+        overflow-auto
+        
         rounded-[clamp(16px,1vw,24px)]
 
         border

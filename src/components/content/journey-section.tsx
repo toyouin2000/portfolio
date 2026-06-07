@@ -62,9 +62,9 @@ export default function JourneySection() {
           text-muted
         "
       >
-        An exploratory mindset led me to join multiple societies at IIT Guwahati, where I organized events, conducted workshops, and led teams. Alongside acads, I continuously strengthened my technical skills, helping me secure multiple internships and begin my career as a TPM. 
-        <br /> 
-        At Datahash, I owned a complete product end-to-end and now leverage AI tools and automation to enhance productivity and product execution.
+       My journey at IIT Guwahati instilled in me a spirit of curiosity, leadership, and relentless problem-solving.
+Over the years, I have applied that mindset to building products at the intersection of technology, data, and user needs.
+Today, I leverage AI and automation to create solutions that drive meaningful impact.
       </p>
 
       {/* =========================

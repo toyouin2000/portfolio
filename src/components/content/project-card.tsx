@@ -1,4 +1,4 @@
-import { LucideIcon } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 type ProjectColor =
   | "violet"
@@ -13,12 +13,13 @@ export type ProjectStatus =
 
 interface ProjectCardProps {
   title: string;
+  slug: string;
   description: string;
   tag: string;
   icon: LucideIcon;
   color: ProjectColor;
   status: ProjectStatus;
-  url: string;
+  onClick: () => void;
 }
 
 const colorMap = {
@@ -74,19 +75,23 @@ export default function ProjectCard({
   icon: Icon,
   color,
   status,
-  url,
+  onClick,
 }: ProjectCardProps) {
   const styles = colorMap[color];
-
+  const isClickable = status === "live";
   const statusStyles = statusMap[status];
 
   return (
-    <a
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
+    <button
+      type="button"
+      onClick={() => {
+        if (isClickable) {
+          onClick();
+        }
+      }}
+    disabled={!isClickable}
       aria-label={`Open ${title}`}
-      className="block h-full"
+      className="block h-full w-full text-left"
     >
       <div
         className="
@@ -225,6 +230,6 @@ export default function ProjectCard({
           </span>
         </div>
       </div>
-    </a>
+    </button>
   );
 }

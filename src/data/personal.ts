@@ -79,6 +79,7 @@ export const impacts = [
   {
     value: "30%",
     title: "Drop in Support Tickets",
+    company: "Datahash",
     icon: BarChart3,
     color: "violet",
   },
@@ -86,6 +87,7 @@ export const impacts = [
   {
     value: "10%",
     title: "Increase in Upgrades",
+    company: "Datahash",
     icon: Users,
     color: "blue",
   },
@@ -93,6 +95,7 @@ export const impacts = [
   {
     value: "50%",
     title: "Shine Enhancement",
+    company: "Reckitt",
     icon: Target,
     color: "green",
   },

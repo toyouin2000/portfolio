@@ -6,11 +6,31 @@ import TabsNavigation from "./tabs-navigation";
 import OverviewTab from "./overview-tab";
 import PersonalTab from "./personal-tab";
 
+import ProjectDetails from "./project-details";
+
 import { TabId } from "@/data/tabs";
+import { Project } from "@/data/projects";
 
 export default function ContentShell() {
   const [activeTab, setActiveTab] =
     useState<TabId>("overview");
+
+  const [
+    selectedProject,
+    setSelectedProject,
+  ] = useState<Project | null>(null);
+
+  // Show Project Details
+  if (selectedProject) {
+    return (
+      <ProjectDetails
+        project={selectedProject}
+        onBack={() =>
+          setSelectedProject(null)
+        }
+      />
+    );
+  }
 
   return (
     <div
@@ -41,9 +61,12 @@ export default function ContentShell() {
         "
       >
         {activeTab === "overview" ? (
-          <OverviewTab />
+          <OverviewTab
+            onProjectClick={
+              setSelectedProject
+            }
+          />
         ) : (
-        //   <OverviewTab />
           <PersonalTab />
         )}
       </div>

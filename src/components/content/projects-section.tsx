@@ -8,10 +8,18 @@ import {
   Folder,
 } from "lucide-react";
 
-import { projects } from "@/data/projects";
+import { projects, Project } from "@/data/projects";
 import ProjectCard from "./project-card";
 
-export default function ProjectsSection() {
+interface Props {
+  onProjectClick: (
+    project: Project
+  ) => void;
+}
+
+export default function ProjectsSection({
+  onProjectClick,
+}: Props) {
   const [emblaRef, emblaApi] =
     useEmblaCarousel({
       align: "start",
@@ -64,7 +72,6 @@ export default function ProjectsSection() {
 
   return (
     <section>
-      {/* Section Header */}
       <div
         className="
           mb-[clamp(1px,1vw,24px)]
@@ -87,9 +94,7 @@ export default function ProjectsSection() {
         </h2>
       </div>
 
-      {/* Carousel */}
       <div className="relative">
-        {/* Left Arrow */}
         <button
           type="button"
           onClick={() =>
@@ -133,7 +138,6 @@ export default function ProjectsSection() {
           />
         </button>
 
-        {/* Embla Viewport */}
         <div
           ref={emblaRef}
           className="
@@ -160,13 +164,15 @@ export default function ProjectsSection() {
               >
                 <ProjectCard
                   {...project}
+                  onClick={() =>
+                    onProjectClick(project)
+                  }
                 />
               </div>
             ))}
           </div>
         </div>
 
-        {/* Right Arrow */}
         <button
           type="button"
           onClick={() =>
@@ -211,7 +217,6 @@ export default function ProjectsSection() {
         </button>
       </div>
 
-      {/* Pagination Dots */}
       <div
         className="
           mt-[clamp(16px,1vw,24px)]

@@ -14,7 +14,7 @@ export default function PortfolioLayout({
 
         p-[clamp(8px,1vw,20px)]
 
-        // overflow-hidden
+        overflow-hidden
 
         max-lg:min-h-dvh
         max-lg:h-auto
@@ -31,7 +31,7 @@ export default function PortfolioLayout({
           h-full
           w-full
 
-        //   overflow-hidden
+          overflow-hidden
 
           rounded-[clamp(16px,1.5vw,32px)]
 

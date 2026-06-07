@@ -1,3 +1,4 @@
+ 
 import {
   Bot,
   Ghost,
@@ -8,14 +9,26 @@ import {
   PlaneTakeoff,
   type LucideIcon,
 } from "lucide-react"; 
+ 
 import type { ProjectStatus } from "@/components/content/project-card";
+import { PlaneTakeoff, Trophy, Clapperboard } from "lucide-react";
+
+export type ProjectIcon =
+  | typeof Trophy
+  | typeof Clapperboard
+  | typeof PlaneTakeoff;
 
 export interface Project {
   title: string;
+  slug: string;
   description: string;
   tag: string;
   status: ProjectStatus;
+ 
   icon: LucideIcon;
+ 
+  icon: ProjectIcon;
+ 
   color: "violet" | "yellow" | "blue" | "green";
   url: string;
 }
@@ -23,6 +36,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "GameStandings",
+    slug: "gamestandings",
     description:
       "Real-time leaderboard for tracking board game standings among peers.",
     tag: "SAAS PLATFORM",
@@ -30,27 +44,33 @@ export const projects: Project[] = [
     icon: Trophy,
     color: "blue",
     url: "https://boardgame-leaderboard.vercel.app/login",
-  }, 
+  },
+
   {
     title: "AnakinWire",
+    slug: "anakinwire",
     description:
-      "Streamline movie planning through venue discovery, coordination, and reminders",
+      "Streamline movie planning through venue discovery, coordination, and reminders.",
     tag: "AGENT",
     status: "live",
     icon: Clapperboard,
     color: "violet",
     url: "https://t.me/bmsanakinbot",
   },
+
   {
     title: "LocoBot",
+    slug: "locobot",
     description:
       "Optimize your travel plans with intelligent departure alerts.",
     tag: "AGENT",
-    status: "live",
+    status: "paused",
     icon: PlaneTakeoff,
     color: "yellow",
     url: "https://t.me/jkionjknkbot",
   },
+ 
   
   
-];
+];  
+  

@@ -37,7 +37,7 @@ export const skillGroups = [
     icon: Code2,
     color: "text-green-500",
     skills: [
-      "APIs",
+      "API",
       "Webhooks",
       "React",
       "NodeJs",

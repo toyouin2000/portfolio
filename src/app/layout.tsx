@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { ProjectProvider } from "@/context/project-context";
+
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -33,7 +36,9 @@ export default function RootLayout({
         "
       >
         <ThemeProvider>
-          {children}
+          <ProjectProvider>
+            {children}
+          </ProjectProvider>
         </ThemeProvider>
       </body>
     </html>

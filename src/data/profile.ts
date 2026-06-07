@@ -8,7 +8,7 @@ export const profile = {
 
   avatar: "/images/photo.jpg",
 
-  resumeUrl: "https://drive.google.com/file/d/11HwQ5Hh0KqSXXz5N4Oxcu2u4ScdHbuut/view?usp=drive_link",
+  resumeUrl: "https://drive.google.com/file/d/1n3_Y4iM2ExxcuVm3xRhxy5AhMmDkm2XU/view?usp=drive_link",
 
   socials: {
     linkedin: "https://www.linkedin.com/in/dishank-ojha-02/",

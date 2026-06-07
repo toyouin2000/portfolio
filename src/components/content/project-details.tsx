@@ -148,29 +148,7 @@ const renderCaseStudy = () => {
   >
     View
   </a>
-) : (
-  <button
-    onClick={() => setIsModalOpen(true)}
-    className="
-      flex
-      shrink-0
-      items-center
-      gap-2
-      rounded-2xl
-      border
-      border-violet-500/30
-      px-4
-      py-2.5
-      font-medium
-      text-violet-400
-      transition-all
-      duration-300
-      hover:bg-violet-500/10
-      hover:border-violet-500/50
-    "
-  >
-    View Details
-  </button>
+) : ( <div></div>
 )}     
  </div>
 

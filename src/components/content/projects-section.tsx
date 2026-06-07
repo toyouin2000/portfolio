@@ -54,21 +54,21 @@ export default function ProjectsSection({
     );
   }, [emblaApi]);
 
-  useEffect(() => {
-    if (!emblaApi) return;
+  // useEffect(() => {
+  //   if (!emblaApi) return;
 
-    setScrollSnaps(
-      emblaApi.scrollSnapList()
-    );
+  //   setScrollSnaps(
+  //     emblaApi.scrollSnapList()
+  //   );
 
-    onSelect();
+  //   onSelect();
 
-    emblaApi.on("select", onSelect);
+  //   emblaApi.on("select", onSelect);
 
-    return () => {
-      emblaApi.off("select", onSelect);
-    };
-  }, [emblaApi, onSelect]);
+  //   return () => {
+  //     emblaApi.off("select", onSelect);
+  //   };
+  // }, [emblaApi, onSelect]);
 
   return (
     <section>

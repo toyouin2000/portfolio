@@ -9,7 +9,7 @@ import {
   BadgeCheck,
   Swords,
   Dice5,
-  Compass,
+  Compass, 
   Map,
   BookOpen,
   ScrollText,
